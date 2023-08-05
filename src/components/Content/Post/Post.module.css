@@ -1,0 +1,21 @@
+.item{
+    width: fit-content;
+    padding:10px;
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+    background-color: darkblue;
+    display: flex;
+    align-items: center;
+}
+
+.image img{
+    height: 50px;
+    border-radius: 50px;
+}
+.text{
+    margin: 5px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}

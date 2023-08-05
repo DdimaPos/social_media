@@ -1,0 +1,22 @@
+.nav{
+    background-color: lightgray;
+    flex-basis: 25%;
+    height: 100%;
+}
+.nav li{
+  list-style: none;
+}
+.item a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.item a:hover{
+  text-decoration: underline;
+}
+.item{
+  list-style: none;
+}
+.item.active a{
+  color: aqua;
+}
