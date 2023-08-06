@@ -4,10 +4,10 @@ function Nav() {
     return(
       <div className={nav_style.nav}>
         <li>
-          <ul className={`${nav_style.item} ${nav_style.active}`}><a href=''>My profile</a></ul>
-          <ul className={nav_style.item}><a href=''>Friends</a></ul>
-          <ul className={nav_style.item}><a href=''>Gallery</a></ul>
-          <ul className={nav_style.item}><a href=''>Messages</a></ul>
+          <ul className={`${nav_style.item} ${nav_style.active}`}><a href='/profile'>My profile</a></ul>
+          <ul className={nav_style.item}><a href='/profile'>Friends</a></ul>
+          <ul className={nav_style.item}><a href='/gallery'>Gallery</a></ul>
+          <ul className={nav_style.item}><a href='/chat'>Messages</a></ul>
         </li>
       </div>
     );

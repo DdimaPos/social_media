@@ -1,6 +1,6 @@
 import React from 'react';
 import Postform from './Postform/Postform';
-import cont_style from './Content.module.css';
+import cont_style from './Profile.module.css';
 import Post from './Post/Post';
 function Content() {
     return(
