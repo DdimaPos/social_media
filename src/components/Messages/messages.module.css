@@ -1,0 +1,13 @@
+.wrapper{
+    flex-basis: 75%;
+    display: flex;
+}
+.fr_list{
+    background-color: grey;
+    flex-basis: 25%;
+}
+.chat{
+    padding:20px;
+    flex-basis: 75%;
+    background-color: aquamarine;
+}

@@ -1,0 +1,17 @@
+.friend{
+    padding:5px;
+    height: 40px;
+    display: flex;
+    border: 1px solid darkgray;
+    align-items: center;
+    
+}
+.name{
+    font-size: 18px;
+    font-weight: bold;
+}
+img{
+    margin: 0 5px 0 0;
+    width: 30px;
+    border-radius: 50%;
+}

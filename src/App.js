@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
 import Content from './components/Content/Content';
+import Messages from "./components/Messages/messages";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <Header />
         <div className='page'>
           <Nav />
-          <Content />
+          {/*<Content />*/}
+          <Messages />
         </div> 
       </div>
     </div>
