@@ -1,10 +1,35 @@
 .wrapper{
     flex-basis: 75%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
 }
 .fr_list{
     background-color: grey;
     flex-basis: 25%;
+}
+.contact{
+    background-color: darkgray;
+    padding:10px;
+}
+.friend{
+    padding:5px;
+    height: 40px;
+    display: flex;
+    border: 1px solid darkgray;
+    align-items: center;
+    
+}
+.name{
+    font-size: 18px;
+    font-weight: bold;
+}
+img{
+    margin: 0 5px 0 0;
+    width: 30px;
+    border-radius: 50%;
+}
+.contact.active{
+    background-color: #414141;
 }
 .chat{
     padding:20px;

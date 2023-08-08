@@ -11,12 +11,9 @@
   color: white;
   font-weight: bold;
 }
-.item a:hover{
-  text-decoration: underline;
-}
 .item{
   list-style: none;
 }
-.item.active a{
+.item .link.active{
   color: aqua;
 }
