@@ -1,9 +1,10 @@
 import { React } from "react";
 import Info_style from './profileInfo.module.css';
 const ProfileInfo = () =>{
+  let avatar = 'https://oir.mobi/uploads/posts/2021-04/1619454473_8-oir_mobi-p-krutoi-kot-zhivotnie-krasivo-foto-9.jpg';
     return(
         <div className={Info_style.description}>
-          <div className={Info_style.photo}><img src='https://koshka.top/uploads/posts/2021-12/thumbs/1638599322_3-koshka-top-p-kotiki-na-avatarku-3.jpg'></img></div>
+          <div className={Info_style.photo}><img src={avatar}></img></div>
           <div className={Info_style.quote}>Королева бала в рот вас ебала</div>
         </div>
     );

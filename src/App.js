@@ -15,8 +15,8 @@ function App() {
           <div className='page'>
             <Nav />
             <Routes>
-              <Route path='/profile' Component={Profile}/>
-              <Route path='/chat' Component={Messages} />
+              <Route path="/profile" Component={Profile}/>
+              <Route path="/chat" Component={Messages} />
             </Routes>
             {/*<Content />*/}
             {/*<Messages />*/}

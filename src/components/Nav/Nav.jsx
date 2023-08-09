@@ -10,8 +10,7 @@ function Nav() {
               if (isActive) linkClasses.push(nav_style.active);
               return linkClasses.join(" "); }}
               to="/profile"
-            >
-              Profile
+            >Profile
             </NavLink>
           </ul>
           <ul className={nav_style.item}><NavLink className={({ isActive }) => {const linkClasses = [nav_style.link];
