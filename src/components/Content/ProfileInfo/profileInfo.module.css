@@ -1,0 +1,13 @@
+.description{
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+.photo{
+  width: 100px;
+  margin: 0 20px 0 0;
+}
+.photo img{
+  width:100px;
+  border-radius: 50%;
+}

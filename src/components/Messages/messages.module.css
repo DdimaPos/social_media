@@ -19,6 +19,9 @@
     align-items: center;
     
 }
+.friend.active{
+    background-color: #5b5b5b;
+}
 .name{
     font-size: 18px;
     font-weight: bold;
@@ -28,9 +31,7 @@ img{
     width: 30px;
     border-radius: 50%;
 }
-.contact.active{
-    background-color: #414141;
-}
+
 .chat{
     padding:20px;
     flex-basis: 75%;

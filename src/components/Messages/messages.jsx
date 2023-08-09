@@ -6,9 +6,9 @@ import { NavLink } from "react-router-dom";
 
 const Friend = (props) =>{
     return(
-        <div className={mes_style.friend}>
+        <div className={mes_style.friend + ' ' + mes_style.active}>
             <img src={props.photo} alt="" />
-            <div className={mes_style.name}><NavLink to={props.adress}>{props.name}</NavLink></div>
+            <div className={mes_style.name}><NavLink to={props.id}>{props.name}</NavLink></div>
         </div>
     );
 }
@@ -17,9 +17,9 @@ const Messages = (props) =>{
     return(
         <div className={mes_style.wrapper}>
             <div className={mes_style.fr_list}>
-            <Friend adress='1' photo="https://i.pinimg.com/736x/6e/ef/37/6eef3770e8aaf4a22e2e28944e0f0478.jpg" name="Walter White"/>
-            <Friend adress='2'photo="https://koshka.top/uploads/posts/2021-12/1640328596_1-koshka-top-p-kota-na-avatarku-1.jpg" name="Dima"/>
-            <Friend adress='3'photo="https://avatars.mds.yandex.net/i?id=5596d24cb431856c74aa0a15a051ab1ee75b7acb-4612849-images-thumbs&n=13" name="Jessie Pinkman" />
+            <Friend id='1' photo="https://i.pinimg.com/736x/6e/ef/37/6eef3770e8aaf4a22e2e28944e0f0478.jpg" name="Walter White"/>
+            <Friend id='2'photo="https://koshka.top/uploads/posts/2021-12/1640328596_1-koshka-top-p-kota-na-avatarku-1.jpg" name="Dima"/>
+            <Friend id='3'photo="https://avatars.mds.yandex.net/i?id=5596d24cb431856c74aa0a15a051ab1ee75b7acb-4612849-images-thumbs&n=13" name="Jessie Pinkman" />
             </div>
             <div className={mes_style.chat}>
                 <My_message text="hello nick"/>
