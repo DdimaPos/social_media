@@ -6,7 +6,7 @@ import Profile from './components/Content/Profile';
 import Messages from "./components/Messages/messages";
 import {BrowserRouter, Routes , Route } from 'react-router-dom';
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="App">
@@ -15,11 +15,11 @@ function App() {
           <div className='page'>
             <Nav />
             <Routes>
-              <Route path="/profile" Component={Profile}/>
-              <Route path="/chat" Component={Messages} />
+              <Route path="/profile" element={<Profile pData={props.postData} ava={props.avatar}/>}/>
+              <Route path="/chat" element={<Messages fData={props.fData} messagesData={props.mData}/>} />
             </Routes>
-            {/*<Content />*/}
-            {/*<Messages />*/}
+            {/*<Gallery />*/}
+            {/*<Chat />*/}
           </div>
         </div>
       </div>

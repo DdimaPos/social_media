@@ -3,14 +3,8 @@ import Postform from './Postform/Postform';
 import cont_style from './Profile.module.css';
 import Post from './Post/Post';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
-function Content() {
-    let avatar ='https://oir.mobi/uploads/posts/2021-04/1619454473_8-oir_mobi-p-krutoi-kot-zhivotnie-krasivo-foto-9.jpg';
-  let PostData = [
-    {message:'my first post'},
-    {message:'how do you do bro'},
-    {message:'YEAH BITCH! Magnets'},
-  ];
-  let PostEl = PostData.map((p) => <Post  message={p.message} src={avatar}/>);
+function Profile(props) {
+  let PostEl = props.pData.map((el) => <Post message={el.message} src={props.ava}/>);
     return(
       <div className={cont_style.content}>
         <ProfileInfo />
@@ -20,4 +14,4 @@ function Content() {
     );
   }
 
-export default Content;
+export default Profile;
