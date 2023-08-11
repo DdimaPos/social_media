@@ -15,8 +15,8 @@ function App(props) {
           <div className='page'>
             <Nav />
             <Routes>
-              <Route path="/profile" element={<Profile pData={props.postData} ava={props.avatar}/>}/>
-              <Route path="/chat" element={<Messages fData={props.fData} messagesData={props.mData}/>} />
+              <Route path="/profile" element={<Profile profData={props.state.profilePage}/>}/>
+              <Route path="/chat" element={<Messages mesData={props.state.mesPage}/>} />
             </Routes>
             {/*<Gallery />*/}
             {/*<Chat />*/}

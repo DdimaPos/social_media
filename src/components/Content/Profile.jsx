@@ -4,7 +4,7 @@ import cont_style from './Profile.module.css';
 import Post from './Post/Post';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 function Profile(props) {
-  let PostEl = props.pData.map((el) => <Post message={el.message} src={props.ava}/>);
+  let PostEl = props.profData.postData.map((el) => <Post message={el.message} src={props.profData.avatar}/>);
     return(
       <div className={cont_style.content}>
         <ProfileInfo />

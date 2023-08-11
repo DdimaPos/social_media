@@ -6,8 +6,8 @@ import Friend from "./Friend/Friend";
 
 
 const Messages = (props) =>{
-    let FriendEl = props.fData.map((el) => <Friend id={el.id} photo={el.src} name={el.Fname}/>);
-    let MessageElem = props.messagesData.map((el) => {
+    let FriendEl = props.mesData.fData.map((el) => <Friend id={el.id} photo={el.src} name={el.Fname}/>);
+    let MessageElem = props.mesData.mesData.map((el) => {
         if(el.type == 'my'){return <My_message text={el.message} id={el.id}/>;}
         else{return <His_message text={el.message} id={el.id}/>;}
     });
