@@ -18,6 +18,9 @@
 //  {message: 'I don`t understand you',id: 5, type:'his'},
 //  {message: 'Еблан...',id: 6, type:'my'},
 //  {message: 'How do you do suka?',id: 7, type:'my'},];
+
+import { rerenderTree } from "../render";
+
 // /*************************************************************** */
 let state = {
     profilePage:{
@@ -45,5 +48,15 @@ let state = {
     },
     
 }
-
+export let addPost = (postText) =>{
+    let newPost = {message: postText};
+    state.profilePage.postData.push(newPost);
+    rerenderTree(state);
+    
+}
+export let sendMes = (mesText) =>{
+    let newMes = {message: mesText, id: 1, type:'my'};
+    state.mesPage.mesData.push(newMes);
+    rerenderTree(state);
+}
 export default state;

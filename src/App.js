@@ -5,7 +5,6 @@ import Nav from './components/Nav/Nav';
 import Profile from './components/Content/Profile';
 import Messages from "./components/Messages/messages";
 import {BrowserRouter, Routes , Route } from 'react-router-dom';
-
 function App(props) {
   return (
     <BrowserRouter>
@@ -15,8 +14,8 @@ function App(props) {
           <div className='page'>
             <Nav />
             <Routes>
-              <Route path="/profile" element={<Profile profData={props.state.profilePage}/>}/>
-              <Route path="/chat" element={<Messages mesData={props.state.mesPage}/>} />
+              <Route path="/profile" element={<Profile profData={props.state.profilePage} addPost={props.addPost}/>}/>
+              <Route path="/chat" element={<Messages mesData={props.state.mesPage} sendMes={props.sendMes }/>} />
             </Routes>
             {/*<Gallery />*/}
             {/*<Chat />*/}

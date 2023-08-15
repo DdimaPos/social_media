@@ -3,6 +3,7 @@ import mes_style from "./messages.module.css";
 import My_message from "./my_message/my_message";
 import His_message from "./his_message/his_message";
 import Friend from "./Friend/Friend";
+import Input from "./Input/input";
 
 
 const Messages = (props) =>{
@@ -18,6 +19,7 @@ const Messages = (props) =>{
             </div>
             <div className={mes_style.chat}>
                 {MessageElem}
+                <Input state={props.mesData} sendMes={props.sendMes}/>
             </div>
         </div>
     );
