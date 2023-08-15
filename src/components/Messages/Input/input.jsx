@@ -8,11 +8,15 @@ const Input = (props) =>{
         if(newMes == "") return;
         props.sendMes(newMes);
     }
+    let MesChanged = () =>{
+        let text = newMessageInput.current.value;
+        props.mesChange(text);
+    }
     let newMessageInput = React.createRef();
     return(
         <div className={in_style.wrapper}>
             <div className={in_style.textInput}>
-                <textarea ref={newMessageInput}></textarea>
+                <textarea onChange={MesChanged} ref={newMessageInput}></textarea>
             </div>
             <div className={in_style.button_wrapper}>
                 <button onClick={Send}>Send</button>

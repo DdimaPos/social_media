@@ -30,6 +30,7 @@ let state = {
             {message:'how do you do bro'},
             {message:'YEAH BITCH! Magnets'},
         ],
+        textChange:'',
     },
     mesPage:{
         fData:[
@@ -44,7 +45,8 @@ let state = {
             {message: 'I don`t understand you',id: 5, type:'his'},
             {message: 'Еблан...',id: 6, type:'my'},
             {message: 'How do you do suka?',id: 7, type:'my'},
-        ]
+        ],
+        mesChange:'',
     },
     
 }
@@ -57,6 +59,17 @@ export let addPost = (postText) =>{
 export let sendMes = (mesText) =>{
     let newMes = {message: mesText, id: 1, type:'my'};
     state.mesPage.mesData.push(newMes);
+    rerenderTree(state);
+}
+export let changePostText = (newText) =>{
+    let newMes = newText;
+    state.profilePage.textChange = newMes;
+    rerenderTree(state);
+}
+export let changeMesText = (newText) =>{
+    let newMes = newText;
+    state.mesPage.mesChange = newMes;
+    console.log('um');
     rerenderTree(state);
 }
 export default state;

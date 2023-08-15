@@ -8,7 +8,7 @@ function Profile(props) {
     return(
       <div className={cont_style.content}>
         <ProfileInfo />
-        <Postform addPost={props.addPost}/>
+        <Postform addPost={props.addPost} changeText={props.changePostText} textChanged={props.profData.textChange}/>
         {PostEl}
       </div>
     );

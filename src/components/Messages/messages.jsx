@@ -19,7 +19,7 @@ const Messages = (props) =>{
             </div>
             <div className={mes_style.chat}>
                 {MessageElem}
-                <Input state={props.mesData} sendMes={props.sendMes}/>
+                <Input state={props.mesData} sendMes={props.sendMes} mesChange={props.mesChange}/>
             </div>
         </div>
     );
