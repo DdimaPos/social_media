@@ -15,7 +15,7 @@ function App(props) {
             <Nav />
             <Routes>
               <Route path="/profile" element={<Profile profData={props.state.profilePage} addPost={props.addPost} changePostText={props.changePostText}/>}/>
-              <Route path="/chat" element={<Messages mesData={props.state.mesPage} sendMes={props.sendMes } mesChange={props.changeMesText}/>} />
+              <Route path="/chat" element={<Messages mesData={props.state.mesPage} sendMes={props.sendMes } changeMesText={props.changeMesText}/>} />
             </Routes>
             {/*<Gallery />*/}
             {/*<Chat />*/}

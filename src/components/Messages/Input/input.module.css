@@ -1,5 +1,9 @@
 .wrapper{
     display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 37%;
+    overflow: hidden;
 }
 .textInput{
     flex-basis: 90%;

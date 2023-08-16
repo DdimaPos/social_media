@@ -2,6 +2,9 @@
     flex-basis: 75%;
     display: grid;
     grid-template-columns: 2fr 10fr;
+    height: 86vh;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 .fr_list{
     background-color: grey;

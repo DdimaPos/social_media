@@ -4,11 +4,9 @@ function PostForm(props){
   let newPostInput = React.createRef();
   let onSubmit = (el) =>{
     el.preventDefault();
-    let newPost = newPostInput.current.value;
+    if(newPostInput.current.value == '') return;
     newPostInput.current.value = '';
-    props.changeText('');
-    if(newPost == "") return;
-    props.addPost(newPost);
+    props.addPost();
 
   }
   let onTextChange = (el) =>{

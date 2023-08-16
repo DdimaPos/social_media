@@ -3,14 +3,15 @@ import in_style from "./input.module.css";
 const Input = (props) =>{
     let Send = (message) =>{
         message.preventDefault();
-        let newMes = newMessageInput.current.value;
+        //let newMes = newMessageInput.current.value;
+        
+        if(newMessageInput.current.value == "") return;
         newMessageInput.current.value = '';
-        if(newMes == "") return;
-        props.sendMes(newMes);
+        props.sendMes();
     }
     let MesChanged = () =>{
         let text = newMessageInput.current.value;
-        props.mesChange(text);
+        props.changeMesText(text);
     }
     let newMessageInput = React.createRef();
     return(

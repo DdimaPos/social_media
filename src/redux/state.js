@@ -18,9 +18,6 @@
 //  {message: 'I don`t understand you',id: 5, type:'his'},
 //  {message: 'Еблан...',id: 6, type:'my'},
 //  {message: 'How do you do suka?',id: 7, type:'my'},];
-
-import { rerenderTree } from "../render";
-
 // /*************************************************************** */
 let state = {
     profilePage:{
@@ -46,30 +43,37 @@ let state = {
             {message: 'Еблан...',id: 6, type:'my'},
             {message: 'How do you do suka?',id: 7, type:'my'},
         ],
-        mesChange:'',
+        mesChangedText:'',
     },
     
 }
-export let addPost = (postText) =>{
-    let newPost = {message: postText};
+export let addPost = () =>{
+    let newPost = {message: state.profilePage.textChange};
     state.profilePage.postData.push(newPost);
+    state.profilePage.textChange = '';
     rerenderTree(state);
     
-}
-export let sendMes = (mesText) =>{
-    let newMes = {message: mesText, id: 1, type:'my'};
-    state.mesPage.mesData.push(newMes);
-    rerenderTree(state);
 }
 export let changePostText = (newText) =>{
     let newMes = newText;
     state.profilePage.textChange = newMes;
     rerenderTree(state);
 }
-export let changeMesText = (newText) =>{
-    let newMes = newText;
-    state.mesPage.mesChange = newMes;
-    console.log('um');
+
+export let sendMes = () =>{
+    let newMes = {message: state.mesPage.mesChangedText, id: 1, type:'my'};
+    state.mesPage.mesData.push(newMes);
+    state.mesPage.mesChangedText = '';
     rerenderTree(state);
+}
+
+export let changeMesText = (newMesText) =>{
+    let newMes = newMesText;
+    state.mesPage.mesChangedText = newMes;
+    rerenderTree(state);
+}
+let rerenderTree = () => {};
+export const Subscriber = (observer) =>{
+    rerenderTree = observer;
 }
 export default state;

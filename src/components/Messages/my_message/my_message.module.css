@@ -2,11 +2,14 @@
     background-color: darkblue;
     padding: 20px;
     width: fit-content;
+    max-width: 300px;
     border-radius: 10px;
     margin:5px;
     margin-left: auto;
+    text-overflow: clip;
 }
 .text{
     font-size: 16px;
     color: white;
+    text-overflow: clip;
 }
