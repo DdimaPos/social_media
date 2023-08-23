@@ -1,9 +1,8 @@
 .wrapper{
-    flex-basis: 75%;
+    flex-basis: 85%;
     display: grid;
     grid-template-columns: 2fr 10fr;
-    height: 86vh;
-    overflow: scroll;
+    height: 90vh;
     overflow-x: hidden;
 }
 .fr_list{
@@ -36,6 +35,15 @@ img{
 }
 
 .chat{
+    display: flex;
+    flex-direction: column;
     flex-basis: 75%;
     background-color: aquamarine;
+    height: 90vh;
+}
+.messages_wrapper{
+    overflow: scroll;
+    overflow-x: hidden;
+    flex-basis: 91%;
+    
 }

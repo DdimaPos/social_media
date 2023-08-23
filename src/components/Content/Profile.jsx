@@ -7,8 +7,9 @@ function Profile(props) {
   let PostEl = props.profData.postData.map((el) => <Post message={el.message} src={props.profData.avatar}/>);
     return(
       <div className={cont_style.content}>
+        <img src="" alt="" />
         <ProfileInfo />
-        <Postform addPost={props.addPost} changeText={props.changePostText} textChanged={props.profData.textChange}/>
+        <Postform dispatch={props.dispatch} textChanged={props.profData.textChange}/>
         {PostEl}
       </div>
     );

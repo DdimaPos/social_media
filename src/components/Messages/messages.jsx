@@ -18,8 +18,8 @@ const Messages = (props) =>{
                 {FriendEl}
             </div>
             <div className={mes_style.chat}>
-                {MessageElem}
-                <Input state={props.mesData} sendMes={props.sendMes} changeMesText={props.changeMesText} mesTextchanged={props.mesData.mesChangedText}/>
+                <div className={mes_style.messages_wrapper}>{MessageElem}</div>
+                <Input state={props.mesData} dispatch={props.dispatch}/>
             </div>
         </div>
     );

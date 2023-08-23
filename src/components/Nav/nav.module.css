@@ -1,7 +1,9 @@
 .nav{
     background-color: lightgray;
-    flex-basis: 25%;
-    height: 100%;
+    flex-basis: 15%;
+    flex-grow: 0;
+    height: 90vh;
+    border-radius: 20px 0 0 20px;
 }
 .nav li{
   list-style: none;
@@ -12,8 +14,25 @@
   font-weight: bold;
 }
 .item{
+  margin:10px auto;
+  width: fit-content;
   list-style: none;
 }
-.item .link.active{
-  color: aqua;
+.unactive{
+  border: 3px solid #eceded;
+}
+.link .active{
+  transform: translateX(-40px);
+  opacity:0;
+  border: 3px solid #84beaf;
+  transition: 0.2s;
+}
+.link .active:hover{
+  opacity: 1;
+}
+.item .link.active .active{
+  
+  transform: translateX(-40px);
+  border-color: #84beaf;
+  opacity: 1;
 }
