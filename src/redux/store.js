@@ -37,38 +37,14 @@ let store = {
     getState(){
         return this._state;
     },
-    Subscriber(observer){
+    subscribe(observer){
         this.rerenderTree = observer;
     },
-    rerenderTree(){},
-
-    /*addPost(){
-        let newPost = {message: this._state.profilePage.textChange};
-        this._state.profilePage.postData.push(newPost);
-        this._state.profilePage.textChange = '';
-        this.rerenderTree(this._state);   
-    },
-    changePostText(newText){
-        let newMes = newText;
-        this._state.profilePage.textChange = newMes;
-        this.rerenderTree(this._state);
-    },
-    sendMes(){
-        let newMes = {message: this._state.mesPage.mesChangedText, id: 1, type:'my'};
-        this._state.mesPage.mesData.push(newMes);
-        this._state.mesPage.mesChangedText = '';
-        this.rerenderTree(this._state);
-    },
-    changeMesText(newMesText){
-        let newMes = newMesText;
-        this._state.mesPage.mesChangedText = newMes;
-        this.rerenderTree(this._state);
-    },*/
-
+    _callSubscriber(){},
     dispatch(action){
         profileReducer(this._state.profilePage, action);
         messagesReducer(this._state.mesPage, action);
-        this.rerenderTree()
+        this._callSubscriber()
     }
     
 } 

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import store from './redux/state';
+import store from './redux/redux-store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let rerenderTree = () =>{
@@ -14,7 +14,7 @@ let rerenderTree = () =>{
         </React.StrictMode>
       );
 }
-store.Subscriber(rerenderTree);
+store.subscribe(() =>{rerenderTree(store.getState());});
 rerenderTree(store.getState());
 
 // If you want to start measuring performance in your app, pass a function

@@ -8,13 +8,10 @@
 .nav li{
   list-style: none;
 }
-.item a{
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
+
 .item{
-  margin:10px auto;
+  padding:0;
+  margin: 10px auto;
   width: fit-content;
   list-style: none;
 }
@@ -22,17 +19,21 @@
   border: 3px solid #eceded;
 }
 .link .active{
+  position: absolute;
   transform: translateX(-40px);
   opacity:0;
   border: 3px solid #84beaf;
   transition: 0.2s;
 }
 .link .active:hover{
-  opacity: 1;
+  opacity: 0.8;
 }
 .item .link.active .active{
   
   transform: translateX(-40px);
   border-color: #84beaf;
   opacity: 1;
+}
+.item .link.active .unactive{
+  opacity: 0;
 }

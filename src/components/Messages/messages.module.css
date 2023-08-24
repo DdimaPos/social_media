@@ -38,7 +38,7 @@ img{
     display: flex;
     flex-direction: column;
     flex-basis: 75%;
-    background-color: aquamarine;
+    
     height: 90vh;
 }
 .messages_wrapper{

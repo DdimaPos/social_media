@@ -1,8 +1,9 @@
 .content{
-  height: 84.5vh;
+  height: 86vh;
   overflow: auto;
-  flex-basis: 80%;
-  background-color: aquamarine;
+  flex-basis: 84%;
   padding: 20px;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   border-radius: 0 20px 20px 0;
 }
