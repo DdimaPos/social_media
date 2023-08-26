@@ -1,5 +1,5 @@
 import React from 'react';
-import Postform from './Postform/Postform';
+import PostformContainer from './Postform/PostformContainer';
 import cont_style from './Profile.module.css';
 import Post from './Post/Post';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
@@ -9,7 +9,7 @@ function Profile(props) {
       <div className={cont_style.content}>
         <img src="" alt="" />
         <ProfileInfo />
-        <Postform dispatch={props.dispatch} textChanged={props.profData.textChange}/>
+        <PostformContainer dispatch={props.dispatch} textChanged={props.profData.textChange}/>
         {PostEl}
       </div>
     );

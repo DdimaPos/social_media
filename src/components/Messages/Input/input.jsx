@@ -6,14 +6,14 @@ const Input = (props) =>{
         message.preventDefault();
         if(newMessageInput.current.value == "") return;
         newMessageInput.current.value = '';
-        props.dispatch(SendActionCreator());
+        props.Send(message);
     }
     let isEnter = (ev) =>{
         if(ev.code == 'Enter')Send(ev);
     }
     let MesChanged = () =>{
         let text = newMessageInput.current.value;
-        props.dispatch(MesChangedActionCreator(text));
+        props.MesChanged(text);
     }
     let newMessageInput = React.createRef();
     return(

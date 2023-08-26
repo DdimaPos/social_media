@@ -32,7 +32,6 @@ let store = {
             ],
             mesChangedText:'',
         },
-
     },
     getState(){
         return this._state;
