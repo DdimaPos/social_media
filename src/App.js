@@ -13,8 +13,8 @@ function App(props) {
           <div className='page'>
             <Nav />
             <Routes>
-              <Route path="/profile" element={<Profile profData={props.state.profilePage} dispatch={props.dispatch}/>}/>
-              <Route path="/chat" element={<Messages mesData={props.state.mesPage} dispatch={props.dispatch}/>} />
+              <Route path="/profile" element={<Profile/>}/>
+              <Route path="/chat" element={<Messages/>} />
             </Routes>
             {/*<Gallery />*/}
             {/*<Chat />*/}
