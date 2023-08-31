@@ -1,20 +1,18 @@
 import Input from "./input";
 import { MesChangedActionCreator, SendActionCreator } from "../../../redux/MessagesReducer";
-import StoreContext from "../../../StoreContext";
-const InputContainer = (props) =>{    
-    return(<StoreContext.Consumer>
-            {(store) =>{
-                let Send = (message) =>{
-                    store.dispatch(SendActionCreator(message));
-                }
-                let MesChanged = (text) =>{
-                    store.dispatch(MesChangedActionCreator(text));
-                   } 
-                return <Input 
-                Send={Send}
-                MesChanged={MesChanged}/> 
-                }
-            }
-        </StoreContext.Consumer>)
+import { connect } from "react-redux";
+let mapDispatchToProps = (dispatch) =>{
+    return{
+        Send: (message) =>{
+            dispatch(SendActionCreator(message));
+        },
+        MesChanged:(text) =>{
+            dispatch(MesChangedActionCreator(text));
+        }
+    }
 }
+let mapStoreToProps = (store) =>{
+    return{}
+}
+const InputContainer = connect(mapStoreToProps, mapDispatchToProps)(Input);
 export default InputContainer;

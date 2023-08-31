@@ -1,6 +1,5 @@
 import React from "react";
 import in_style from "./input.module.css";
-import { MesChangedActionCreator, SendActionCreator } from "../../../redux/MessagesReducer";
 const Input = (props) =>{
     let Send = (message) =>{
         message.preventDefault();

@@ -5,6 +5,7 @@ import Profile from './components/Content/Profile';
 import Messages from "./components/Messages/messages";
 import {BrowserRouter, Routes , Route } from 'react-router-dom';
 function App(props) {
+
   return (
     <BrowserRouter>
       <div className="App">

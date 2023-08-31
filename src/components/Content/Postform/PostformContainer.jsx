@@ -1,7 +1,7 @@
 import PostForm from "./Postform";
 import { onSubmitActionCreator, onTextChangeActionCreator } from '../../../redux/ProfileReducer';
-import StoreContext from "../../../StoreContext";
-const PostFormContainer = () =>{
+import { connect } from "react-redux";
+/*const PostFormContainer = () =>{
     return(<StoreContext.Consumer>
       {(store) => {
         let onSubmit = (el) =>{
@@ -16,7 +16,22 @@ const PostFormContainer = () =>{
         }
       }
     </StoreContext.Consumer>
-        
     );
+}*/
+let mapDispatchToProps = (dispatch) =>{
+  return{
+    onSubmit: (el) =>{
+      dispatch(onSubmitActionCreator(el));
+    },
+    onTextChange: (el) =>{
+      dispatch(onTextChangeActionCreator(el));
+    }
+  }
 }
+let mapStoreToProps = (store) =>{
+  return{
+    
+  }
+}
+const PostFormContainer = connect(mapStoreToProps,mapDispatchToProps)(PostForm);
 export default PostFormContainer;
