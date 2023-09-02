@@ -10,37 +10,45 @@ import galleryLogoActive from './logos/gallery_logo_active.png';
 import chatLogo from './logos/chat_logo_active.png';
 import chatLogoActive from './logos/chat_logo.png';
 function Nav() {
+  const concatClasses = (isActive) => {
+    const linkClasses = [nav_style.link];
+    if (isActive) linkClasses.push(nav_style.active);
+    return linkClasses.join(" "); 
+  }
+  const NavLogo = (props) =>{
+    return(<div>
+      <img className={nav_style.unactive}src={props.logo} alt="" />
+      <img className={nav_style.active} src={props.logoActive} alt="" />
+    </div>
+    )
+  }
     return(
       <div className={nav_style.nav}>
-        <li>
-          <ul className={nav_style.item}>
-            <NavLink className={({ isActive }) => {const linkClasses = [nav_style.link];
-              if (isActive) linkClasses.push(nav_style.active);
-              return linkClasses.join(" "); }}
-              to="/profile"
-            ><img className={nav_style.unactive}src={profileLogo} alt="" />
-            <img className={nav_style.active} src={profileLogoActive} alt="" />
+        <ul>
+          <li className={nav_style.item}>
+            <NavLink className={({ isActive }) => concatClasses(isActive)}
+              to="/profile">
+              <NavLogo logo={profileLogo} logoActive ={profileLogoActive}/>
             </NavLink>
-          </ul>
-          <ul className={nav_style.item}><NavLink className={({ isActive }) => {const linkClasses = [nav_style.link];
-              if (isActive) linkClasses.push(nav_style.active);
-              return linkClasses.join(" "); }}
-              to="/friends"
-            ><img className={nav_style.unactive}src={FriendsLogo} alt="" />
-            <img className={nav_style.active} src={FriendsLogoActive} alt="" /></NavLink></ul>
-          <ul className={nav_style.item}><NavLink className={({ isActive }) => {const linkClasses = [nav_style.link];
-              if (isActive) linkClasses.push(nav_style.active);
-              return linkClasses.join(" "); }}
-              to="/gallery"
-            ><img className={nav_style.unactive}src={galleryLogo} alt="" />
-            <img className={nav_style.active} src={galleryLogoActive} alt="" /></NavLink></ul>
-          <ul className={nav_style.item}><NavLink className={({ isActive }) => {const linkClasses = [nav_style.link];
-              if (isActive) linkClasses.push(nav_style.active);
-              return linkClasses.join(" "); }}
-              to="/chat"
-            ><img className={nav_style.unactive}src={chatLogo} alt="" />
-            <img className={nav_style.active} src={chatLogoActive} alt="" /></NavLink></ul>
-        </li>
+          </li>
+          <li className={nav_style.item}>
+            <NavLink className={({ isActive }) => concatClasses(isActive)}
+              to="/friends">
+              <NavLogo logo={FriendsLogo} logoActive ={FriendsLogoActive}/>
+            </NavLink>
+          </li>
+          <li className={nav_style.item}>
+            <NavLink className={({ isActive }) => concatClasses(isActive)}
+              to="/gallery">
+              <NavLogo logo={galleryLogo} logoActive ={galleryLogoActive}/>
+            </NavLink></li>
+          <li className={nav_style.item}>
+            <NavLink className={({ isActive }) => concatClasses(isActive)}
+              to="/chat">
+              <NavLogo logo={chatLogo} logoActive ={chatLogoActive}/>
+            </NavLink>
+          </li>
+        </ul>
       </div>
     );
   }

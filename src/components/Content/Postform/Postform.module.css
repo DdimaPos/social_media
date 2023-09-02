@@ -5,16 +5,14 @@
     margin:5px auto;
 }
 .submit{
-    
     border: none;
     padding: 5px;
     font-size: 15px;
     border-radius: 5px;
     background-color: rgb(94, 183, 94);
     transition: 0.2s;
-    cursor: pointer;
 }
 .submit:hover{
     background-color: rgb(124, 220, 124);
-
+    cursor: pointer ;
 }

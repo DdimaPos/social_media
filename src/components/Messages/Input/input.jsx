@@ -1,16 +1,16 @@
 import React from "react";
 import in_style from "./input.module.css";
 const Input = (props) =>{
-    let Send = (message) =>{
+    const Send = (message) =>{
         message.preventDefault();
         if(newMessageInput.current.value == "") return;
         newMessageInput.current.value = '';
         props.Send(message);
     }
-    let isEnter = (ev) =>{
+    const isEnter = (ev) =>{
         if(ev.code == 'Enter')Send(ev);
     }
-    let MesChanged = () =>{
+    const MesChanged = () =>{
         let text = newMessageInput.current.value;
         props.MesChanged(text);
     }

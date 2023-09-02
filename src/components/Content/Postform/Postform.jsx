@@ -3,17 +3,16 @@ import form_style from "./Postform.module.css";
 //import { onSubmitActionCreator, onTextChangeActionCreator } from '../../../redux/ProfileReducer';
 const PostForm = (props) => {
   let newPostInput = React.createRef();
-  let onSubmit = (el) =>{
+  const onSubmit = (el) =>{
     el.preventDefault();
     if(newPostInput.current.value == '') return;
     newPostInput.current.value = '';
     props.onSubmit(el)
-
   }
-  let keyDownTrack = (el) => {
+  const keyDownTrack = (el) => {
     if (el.code == 'Enter') onSubmit(el);
   }
-  let onTextChange = (el) =>{
+  const onTextChange = (el) =>{
     let text = newPostInput.current.value;
     props.onTextChange(text);
   }

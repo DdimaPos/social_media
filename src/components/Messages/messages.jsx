@@ -9,10 +9,10 @@ import { useSelector } from "react-redux";
 const Messages = (props) =>{
     const mesPage = useSelector(state => state.mesPage)
     let FriendEl = mesPage.fData.map((el) => <Friend id={el.id} photo={el.src} name={el.Fname}/>);
-            let MessageElem = mesPage.mesData.map((el) => {
-                if(el.type == 'my'){return <My_message text={el.message} id={el.id}/>;}
-                else{return <His_message text={el.message} id={el.id}/>;}
-            });
+    let MessageElem = mesPage.mesData.map((el) => {
+        if(el.type == 'my'){return <My_message text={el.message} id={el.id}/>;}
+        else{return <His_message text={el.message} id={el.id}/>;}
+    });
     return(
             <div className={mes_style.wrapper}>
             <div className={mes_style.fr_list}>
